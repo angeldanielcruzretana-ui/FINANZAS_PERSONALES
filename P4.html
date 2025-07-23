@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <link rel="icon" type="image/png" href="img/logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meta Financiera</title>
+  <link rel="stylesheet" href="css/P4.css" />
+</head>
+<body>
+
+  <section class="meta-panel">
+    <h2>🎯 Panel de Metas Financieras</h2>
+
+    <!-- INTRODUCCIÓN AL USUARIO -->
+    <div class="intro">
+      <p>
+        Bienvenido al panel de metas de ahorro. Aquí podrás registrar tus metas financieras,
+        como comprar un nuevo celular, una laptop o ahorrar para un viaje. Solo necesitas ingresar el
+        nombre de tu meta, el monto total que deseas alcanzar y cuánto has ahorrado hasta ahora.
+        El sistema calculará tu progreso y te lo mostrará con una barra visual.
+      </p>
+    </div>
+
+    <!-- FORMULARIO -->
+    <form id="formulario-meta">
+      <label for="nombre">Nombre de la meta:</label>
+      <input type="text" id="nombre" placeholder="Ej. Comprar laptop" required />
+
+      <label for="total">Monto objetivo ($):</label>
+      <input type="number" id="total" placeholder="Ej. 10000" required />
+
+      <label for="ahorrado">Cantidad ahorrada ($):</label>
+      <input type="number" id="ahorrado" placeholder="Ej. 4000" required />
+
+      <button type="submit">Calcular progreso</button>
+    </form>
+
+    <!-- RESULTADO -->
+    <div class="resultado" id="resultado">
+      <h3 id="meta-nombre"></h3>
+      <div class="barra-container">
+        <div class="barra" id="barra"></div>
+      </div>
+      <p id="porcentaje"></p>
+    </div>
+  </section>
+
+  <script src="js/P4.js"></script>
+</body>
+</html>

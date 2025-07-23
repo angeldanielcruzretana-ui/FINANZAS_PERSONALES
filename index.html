@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Finanzas - Inicio</title>
+ <link rel="icon" type="image/png" href="img/logo.png">
+  <!-- Enlace a la hoja de estilos externa -->
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <!-- ===== ENCABEZADO ===== -->
+  <header>
+    <!-- Logo y título principal -->
+    <img src="img/logo.png" alt="Logo Mis Finanzas" class="logo" />
+    <h1>Mis Finanzas</h1>
+  </header>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main>
+    <!-- Sección del formulario de inicio de sesión -->
+    <section class="formulario">
+      <h2>Iniciar Sesión</h2>
+
+      <!-- Formulario que envía los datos al archivo dashboard.php -->
+      <form action="dashboard.php" method="POST">
+        <!-- Campo de correo electrónico -->
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <!-- Campo de contraseña -->
+        <label for="clave">Contraseña:</label>
+        <input type="password" id="clave" name="clave" required />
+
+        <!-- Botón para enviar el formulario -->
+        <button type="submit">Entrar</button>
+      </form>
+
+      <!-- Enlace para usuarios nuevos -->
+      <p>¿No tienes cuenta? <a href="crud.php">Regístrate aquí</a></p>
+    </section>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer>
+    <!-- Derechos reservados -->
+    <p>&copy; 2025 Mis Finanzas | Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>

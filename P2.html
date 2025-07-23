@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Finanzas</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+
+  <!-- Enlace a hoja de estilos personalizada -->
+  <link rel="stylesheet" href="css/P2.css">
+
+  <!-- Librería Chart.js para gráficas -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <!-- Contenedor general de la página -->
+  <div class="container">
+
+    <!-- Título principal -->
+    <h2>Calculadora de Finanzas Personales</h2>
+
+    <!-- Introducción de uso -->
+    <div class="introduccion">
+      <p>
+        Esta herramienta te permite llevar un control básico de tus finanzas. Ingresa tus ingresos, egresos y otros gastos 
+        mensuales para obtener un resumen rápido. Verás una gráfica que representa visualmente cómo estás distribuyendo tu dinero.
+        Ideal para comenzar a tomar decisiones financieras más inteligentes y conscientes.
+      </p>
+    </div>
+
+    <!-- Formulario para ingresar datos financieros -->
+    <form id="formFinanzas">
+      <label for="ingresos">Ingresos ($)</label>
+      <input type="number" id="ingresos" required>
+
+      <label for="egresos">Egresos ($)</label>
+      <input type="number" id="egresos" required>
+
+      <label for="gastos">Otros gastos ($)</label>
+      <input type="number" id="gastos" required>
+
+      <button type="submit">Calcular</button>
+    </form>
+
+    <!-- Resultado del cálculo -->
+    <div id="resultado"></div>
+
+    <!-- Gráfica de resultados -->
+    <canvas id="grafica" width="400" height="400"></canvas>
+  </div>
+
+  <!-- Lógica de la calculadora -->
+  <script src="js/P2.js"></script>
+</body>
+</html>

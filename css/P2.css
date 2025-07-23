@@ -1,0 +1,154 @@
+/* --------- ESTILO GENERAL DE LA PÁGINA --------- */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #fff);
+  margin: 0;
+  padding: 2rem;
+}
+
+/* --------- CONTENEDOR PRINCIPAL --------- */
+.container {
+  max-width: 540px;
+  margin: auto;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 25px rgba(0, 105, 153, 0.15);
+  transition: transform 0.3s;
+  animation: fadeIn 0.8s ease;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+/* --------- ANIMACIÓN DE ENTRADA --------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------- TÍTULOS --------- */
+h2 {
+  text-align: center;
+  color: #006999;
+  margin-bottom: 1.5rem;
+}
+
+/* --------- ETIQUETAS E INPUTS --------- */
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-top: 0.3rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #006999;
+  outline: none;
+  background-color: #f1fbff;
+}
+
+/* --------- BOTÓN --------- */
+button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  transform: scale(1.03);
+}
+
+/* --------- RESULTADO CALCULADO --------- */
+#resultado {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #1b4332;
+  text-align: center;
+}
+
+/* --------- CANVAS (GRÁFICA) --------- */
+canvas {
+  margin-top: 2rem;
+  width: 100% !important;
+  max-height: 300px;
+}
+
+/* ---------------------------
+   RESPONSIVE DESIGN
+--------------------------- */
+
+/* Teléfonos pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 1rem; /* Menor espacio en pantallas pequeñas */
+  }
+
+  .container {
+    padding: 1.5rem; /* Reduce el relleno del contenedor */
+  }
+
+  h2 {
+    font-size: 1.4rem; /* Título más pequeño para caber en pantalla */
+  }
+
+  input, button {
+    font-size: 0.95rem; /* Tamaño de fuente reducido */
+    padding: 0.6rem;    /* Menos espacio interno */
+  }
+
+  #resultado {
+    font-size: 1rem;    /* Ajuste de tamaño del resultado */
+  }
+}
+
+/* Tablets (481px a 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem;
+    max-width: 90%; /* El contenedor se adapta mejor al ancho disponible */
+  }
+}
+
+/* Escritorio grande (más de 1200px) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 640px; /* Se amplía el contenedor ligeramente */
+  }
+
+  h2 {
+    font-size: 2rem; /* Título más grande para aprovechar espacio */
+  }
+
+  #resultado {
+    font-size: 1.4rem;
+  }
+}

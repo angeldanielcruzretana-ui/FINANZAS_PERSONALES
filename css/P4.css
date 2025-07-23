@@ -1,0 +1,153 @@
+/* ========== ESTILOS GENERALES ========== */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f8ff;
+  padding: 1rem; /* Espaciado general */
+}
+
+/* Contenedor principal del formulario */
+.meta-panel {
+  max-width: 600px; /* Limita el ancho máximo */
+  margin: 60px auto; /* Centrado vertical y horizontal */
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  animation: fadeIn 0.7s ease; /* Animación al aparecer */
+}
+
+/* Título principal */
+.meta-panel h2 {
+  text-align: center;
+  color: #005e8a;
+  font-size: 1.6rem;
+}
+
+/* Formulario en columna */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Etiquetas del formulario */
+label {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Campos de entrada */
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+/* Botón de enviar */
+button {
+  margin-top: 25px;
+  padding: 12px;
+  background-color: #0073a8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+/* Efecto hover del botón */
+button:hover {
+  background-color: #005e8a;
+  transform: scale(1.05);
+}
+
+/* Contenedor para resultados */
+.resultado {
+  display: none;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Barra de progreso */
+.barra-container {
+  width: 100%;
+  height: 28px;
+  background-color: #e0e0e0;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+/* Estilo interno de la barra */
+.barra {
+  height: 100%;
+  width: 0%; /* Se llena dinámicamente con JS */
+  background: linear-gradient(90deg, #00c9a7, #0073a8);
+  color: white;
+  text-align: center;
+  line-height: 28px;
+  font-weight: bold;
+  border-radius: 14px 0 0 14px;
+  transition: width 1s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+/* 📱 MÓVILES: Estilos para pantallas menores a 480px */
+@media (max-width: 480px) {
+  .meta-panel {
+    padding: 20px;
+    margin: 30px 10px;
+  }
+
+  .meta-panel h2 {
+    font-size: 1.3rem;
+  }
+
+  label,
+  input,
+  button {
+    font-size: 0.95rem; /* Fuente ligeramente más chica */
+  }
+
+  .barra-container {
+    height: 24px;
+  }
+
+  .barra {
+    font-size: 0.85rem;
+  }
+}
+
+/* 📱📱 TABLETS: Estilos para pantallas de hasta 768px */
+@media (max-width: 768px) {
+  .meta-panel {
+    margin: 40px 20px;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+
+  .meta-panel h2 {
+    font-size: 1.4rem;
+  }
+}

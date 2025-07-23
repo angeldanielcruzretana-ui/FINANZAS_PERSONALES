@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <link rel="icon" type="image/png" href="img/logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interés Compuesto</title>
+  <link rel="stylesheet" href="css/P3.css" />
+</head>
+<body>
+
+<section class="seccion-interes-compuesto">
+  <h2>🧮 Calculadora de Interés Compuesto</h2>
+
+  <p class="intro">
+    Esta herramienta te permite estimar cuánto dinero tendrás en el futuro si realizas una inversión o ahorro con una tasa de interés fija. 
+    Ingresa el monto inicial, la tasa de interés anual, los años y meses que deseas calcular, ¡y descubre cómo crecerá tu dinero!
+  </p>
+
+  <form id="form-interes">
+    <label for="monto">💰 Monto Inicial ($):</label>
+    <input type="number" id="monto" required />
+
+    <label for="tasa">📈 Tasa Anual (%):</label>
+    <input type="number" id="tasa" required />
+
+    <label for="anios">📅 Años:</label>
+    <input type="number" id="anios" required />
+
+    <label for="meses">🗓️ Meses adicionales:</label>
+    <input type="number" id="meses" min="0" max="11" value="0" />
+
+    <button type="submit">💡 Calcular</button>
+  </form>
+
+  <div id="resultado-interes" class="resultado"></div>
+</section>
+
+<script src="js/P3.js"></script>
+</body>
+</html>

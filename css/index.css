@@ -1,0 +1,142 @@
+/* ---------------------- REINICIO BÁSICO ---------------------- */
+
+/* Reinicio básico de márgenes, rellenos y ajuste de caja */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------------- CUERPO GENERAL ---------------------- */
+
+body {
+  font-family: Arial, sans-serif;       /* Fuente predeterminada */
+  line-height: 1.6;                     /* Altura de línea para mejor legibilidad */
+  background-color: #f2f2f2;            /* Color de fondo suave */
+  color: #333;                          /* Color del texto principal */
+  display: flex;                        /* Uso de flexbox para estructurar */
+  flex-direction: column;              /* Dirección vertical (columnas) */
+  min-height: 100vh;                   /* Altura mínima igual a la pantalla */
+}
+
+/* ---------------------- HEADER ---------------------- */
+
+header {
+  background-color: #1d3557;           /* Azul oscuro */
+  color: white;                        /* Texto blanco */
+  padding: 1rem;                       /* Espaciado interno */
+  text-align: center;                  /* Centrar texto */
+}
+
+.logo {
+  width: 60px;                         /* Ancho fijo */
+  height: auto;                        /* Altura proporcional */
+  display: block;
+  margin: 0 auto 0.5rem;               /* Centrado horizontal con margen inferior */
+}
+
+/* ---------------------- MAIN ---------------------- */
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.formulario {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.formulario h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.formulario label {
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.formulario button {
+  width: 100%;
+  background-color: #457b9d;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background-color: #1d3557;
+}
+
+.formulario a {
+  color: #1d3557;
+  text-decoration: none;
+}
+
+.formulario a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------- FOOTER ---------------------- */
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1d3557;
+  color: white;
+}
+
+/* ---------------------- RESPONSIVE DESIGN ---------------------- */
+
+/* Teléfonos: menos de 600px */
+@media (max-width: 600px) {
+  .formulario {
+    padding: 1rem;                    /* Menos espacio interno */
+  }
+
+  .formulario h2 {
+    font-size: 1.2rem;                /* Título más pequeño */
+  }
+
+  body {
+    padding: 1rem;                    /* Separación general para no pegar a los bordes */
+  }
+}
+
+/* Tablets: entre 601px y 992px */
+@media (min-width: 601px) and (max-width: 992px) {
+  .formulario {
+    padding: 2rem;
+    max-width: 500px;                 /* Un poco más ancho en tablets */
+  }
+
+  .formulario h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Escritorio grande: más de 992px */
+@media (min-width: 993px) {
+  .formulario {
+    max-width: 600px;                 /* Más ancho para pantallas grandes */
+  }
+}

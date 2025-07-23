@@ -1,0 +1,161 @@
+/* --------- ESTILO GENERAL DE LA PÁGINA --------- */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #e4f3ff, #ffffff);
+  margin: 0;
+  padding: 20px;
+}
+
+/* --------- SECCIÓN PRINCIPAL (INTERÉS COMPUESTO) --------- */
+.seccion-interes-compuesto {
+  max-width: 650px;
+  background-color: #ffffff;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 94, 138, 0.2);
+  animation: fadeIn 1.2s ease;
+}
+
+.seccion-interes-compuesto h2 {
+  text-align: center;
+  color: #005e8a;
+  margin-bottom: 15px;
+}
+
+/* Texto introductorio */
+.intro {
+  text-align: justify;
+  color: #444;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  animation: fadeIn 1s ease;
+}
+
+/* --------- FORMULARIO --------- */
+form label {
+  display: block;
+  margin-top: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  transition: box-shadow 0.3s;
+}
+
+form input:focus {
+  box-shadow: 0 0 8px #0073a8;
+  outline: none;
+}
+
+/* --------- BOTÓN --------- */
+button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  background-color: #0073a8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #005e8a;
+  transform: scale(1.05);
+}
+
+/* --------- RESULTADO CALCULADO --------- */
+.resultado {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #007b5f;
+  font-weight: bold;
+  animation: fadeInUp 0.8s ease;
+}
+
+/* --------- ANIMACIONES --------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------
+   RESPONSIVE DESIGN
+--------------------------- */
+
+/* Celulares pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 10px; /* Reduce el padding en general */
+  }
+
+  .seccion-interes-compuesto {
+    padding: 20px;           /* Menos relleno interno */
+    margin: 30px auto;       /* Menos margen superior */
+  }
+
+  .seccion-interes-compuesto h2 {
+    font-size: 1.4rem;       /* Reduce tamaño del título */
+  }
+
+  .intro {
+    font-size: 0.95rem;      /* Texto más compacto */
+  }
+
+  .resultado {
+    font-size: 1.1rem;       /* Resultado más accesible */
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  form input {
+    padding: 8px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets (481px a 768px) */
+@media (max-width: 768px) {
+  .seccion-interes-compuesto {
+    max-width: 90%;          /* Contenedor más fluido */
+    padding: 25px;
+  }
+
+  .seccion-interes-compuesto h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Pantallas grandes (más de 1200px) */
+@media (min-width: 1200px) {
+  .seccion-interes-compuesto {
+    max-width: 720px;        /* Se permite crecer más el contenedor */
+  }
+
+  .seccion-interes-compuesto h2 {
+    font-size: 2rem;
+  }
+
+  .resultado {
+    font-size: 1.5rem;
+  }
+}

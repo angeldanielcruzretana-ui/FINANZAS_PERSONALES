@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Finanzas Para Todos - Menú</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/P1.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="logo">
+      <span class="logo-icon">📈</span>
+      MIS <br> FINANZAS
+    </div>
+
+    <nav>
+      <div class="menu-item" onclick="toggleMenu(this)">Herramientas
+        <div class="submenu">
+          <a href="P2.html">Calculadora de gastos</a>
+          <a href="P3.html">Calculadora de Interés Compuesto</a>
+          <a href="P4.html">Panel de metas financieras</a>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleMenu(this)">Resumen de Gastos
+        <div class="submenu">
+          <a href="#">Mensual</a>
+          <a href="#">Anual</a>
+          <a href="#">Quincenal</a>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleMenu(this)">Aprende de Finanzas
+        <div class="submenu">
+          <a href="#">Cursos</a>
+          <a href="#">Guías</a>
+          <a href="#">Videos</a>
+        </div>
+      </div>
+      <div class="menu-item">Quiénes somos</div>
+      <div class="menu-item">Atención</div>
+    </nav>
+
+    <div class="auth-buttons">
+      <button><a href="index.html">Iniciar Sesión</a></button>
+      <button><a href="login.html">Registrarte</a></button>
+    </div>
+  </header>
+
+  <!-- MENÚ MÓVIL -->
+  <div class="menu-movil">
+    <button onclick="document.querySelector('nav').style.display='flex'; this.style.display='none';">☰ Menú</button>
+  </div>
+
+  <!-- CARRUSEL -->
+  <div class="carousel-container">
+    <div class="carousel">
+      <img src="img/2.jpg" class="carousel-image active" alt="Imagen 1">
+      <img src="img/4.png" class="carousel-image" alt="Imagen 2">
+      <img src="img/3.png" class="carousel-image" alt="Imagen 3">
+      <img src="img/5.jpeg" class="carousel-image" alt="Imagen 4">
+    </div>
+    <button class="carousel-button prev">&#10094;</button>
+    <button class="carousel-button next">&#10095;</button>
+  </div>
+
+  <!-- BLOG/NOTICIAS -->
+  <section class="seccion-blog-misfinanzas">
+    <h2>📰 Últimas Noticias y Consejos Financieros</h2>
+    <div class="tarjetas-blog">
+      <article class="tarjeta-blog">
+        <img src="img/13.png" alt="Noticia ahorro">
+        <h3>5 Trucos para Ahorrar Más Cada Mes</h3>
+        <p>Pequeños hábitos diarios pueden hacer la diferencia. ¡Empieza hoy mismo a transformar tu bolsillo!</p>
+        <a href="https://womenalia.com/articulo/trucos-ahorrar-mes/">Leer más</a>
+      </article>
+      <article class="tarjeta-blog">
+        <img src="img/11.png" alt="Noticia inversión">
+        <h3>¿Invertir con Poco Dinero? ¡Sí se puede!</h3>
+        <p>Conoce las plataformas y estrategias que te permiten empezar a invertir desde $100 pesos.</p>
+        <a href="https://dinn.com.mx/b/5-formas-de-invertir-con-muy-poco-dinero-riesgo-y-rendimiento">Leer más</a>
+      </article>
+      <article class="tarjeta-blog">
+        <img src="img/12.jpg" alt="Noticia tips">
+        <h3>Evita Errores Financieros Comunes</h3>
+        <p>No caigas en trampas del consumo. Aprende a manejar tu tarjeta de forma inteligente.</p>
+        <a href="https://www.iuv.edu.mx/2024/12/10/5-errores-financieros-comunes-y-como-evitarlos/">Leer más</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- EDUCACIÓN FINANCIERA -->
+  <section class="educacion-financiera-section">
+    <div class="educacion-financiera-contenido">
+      <div class="educacion-financiera-texto">
+        <h1>Educación Financiera Personal</h1>
+        <h3>Tu camino hacia la libertad financiera</h3>
+        <p>
+          Aprender a administrar tu dinero es esencial para lograr estabilidad y alcanzar tus metas. 
+          La educación financiera te ayuda a tomar decisiones inteligentes sobre tus ingresos, egresos, 
+          ahorros e inversiones. ¡Comienza hoy a mejorar tu futuro!
+        </p>
+      </div>
+      <div class="educacion-financiera-video">
+        <video src="img/6.mp4" controls></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFORMACIÓN IMPORTANTE -->
+  <section class="seccion-informativa-finanzas">
+    <h2>Temas Clave de Finanzas Personales</h2>
+    <div class="tarjetas-finanzas">
+      <div class="tarjeta">
+        <img src="img/7.jpeg" alt="Ahorro">
+        <h3>Ahorro Inteligente</h3>
+        <p>Aprende a guardar dinero mes a mes sin complicaciones.</p>
+      </div>
+      <div class="tarjeta">
+        <img src="img/8.png" alt="Inversión">
+        <h3>Inversiones Básicas</h3>
+        <p>Conoce cómo hacer crecer tu dinero de forma segura.</p>
+      </div>
+      <div class="tarjeta">
+        <img src="img/9.jpeg" alt="Presupuesto">
+        <h3>Control de Presupuesto</h3>
+        <p>Maneja tus ingresos y egresos de forma efectiva.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <p><br><strong>MIS FINANZAS</strong></p>
+        <img src="img/logo.png" alt="Mis Finanzas" />
+        <p><br><strong>CECYTEM</strong></p>
+        <img src="img/CE.png" alt="CECYTEM" />
+      </div>
+      <!-- columnas -->
+      <div class="footer-columns">
+        <div class="footer-column">
+          <ul>
+            <li><strong>Quiénes somos</strong></li>
+            <li><a href="#">Actualidad</a></li>
+            <li><a href="#">Registro profesores</a></li>
+            <li><a href="#">Registro colaboradores</a></li>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Accesibilidad</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li class="social-icons">
+              <a href="#"><img src="img/MAIL.jpeg" alt="Mail"></a>
+              <a href="#"><img src="img/ISTA.jpeg" alt="Instagram"></a>
+              <a href="#"><img src="img/FACE.jpeg" alt="Facebook"></a>
+              <a href="#"><img src="img/YOUTUBE.png" alt="YouTube"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <ul>
+            <li><strong>Descubre</strong></li>
+            <li><a href="#">¿Cómo está tu salud financiera?</a></li>
+            <li><a href="#">¿Cómo elaborar tu presupuesto?</a></li>
+            <li><a href="#">¿Cómo gestionar tus deudas?</a></li>
+            <li><a href="#">¿Cómo cuidar tu entorno financiero?</a></li>
+            <li><a href="#">¿Cómo preparar tu jubilación?</a></li>
+            <li><a href="#">¿Cómo invertir tu dinero?</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <ul>
+            <li><strong>Participa</strong></li>
+            <li><a href="#">Red de Colaboradores</a></li>
+            <li><a href="#">Profesores</a></li>
+            <li><a href="#">Día de la Educación Financiera</a></li>
+            <li><a href="#">Premios de la Educación Financiera</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <ul>
+            <li><strong>Aprende</strong></li>
+            <li><a href="#">Herramientas</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Podcasts</a></li>
+            <li><a href="#">Guías</a></li>
+            <li><a href="#">Cursos y webinars</a></li>
+            <li><a href="#">Glosario</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>2026 © Plan de Educación Financiera. CECYTEM. Todos los derechos reservados |
+        <a href="#">Política de Privacidad</a> · <a href="#">Cookies</a> · <a href="#">Aviso legal</a> · <a href="#">Accesibilidad</a></p>
+    </div>
+  </footer>
+
+  <script src="js/carrusel.js"></script>
+  <script src="js/P1.js"></script>
+</body>
+</html>

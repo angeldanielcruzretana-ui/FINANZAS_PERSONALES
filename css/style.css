@@ -1,0 +1,181 @@
+/* ====== CONFIGURACIÓN GLOBAL ====== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    color: #333;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ====== FORMULARIO DE USUARIOS ====== */
+.users-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.users-form form:hover {
+    transform: scale(1.01);
+}
+
+/* ====== CAMPOS DE TEXTO ====== */
+.users-form form input[type="text"],
+.users-form form input[type="password"],
+.users-form form input[type="email"] {
+    font-family: inherit;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.users-form form input:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 8px rgba(0, 119, 182, 0.3);
+    outline: none;
+    background-color: #f0faff;
+}
+
+/* ====== BOTÓN DE ENVÍO ====== */
+.users-form form input[type="submit"] {
+    background: linear-gradient(to right, #00b894, #00cec9);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.users-form form input[type="submit"]:hover {
+    background: linear-gradient(to right, #00cec9, #00b894);
+    transform: scale(1.03);
+}
+
+/* ====== TABLA DE USUARIOS ====== */
+.users-table table {
+    border-collapse: collapse;
+    width: 95%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.users-table table th,
+.users-table table td {
+    padding: 16px;
+    text-align: center;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.users-table table th {
+    background-color: #0077b6;
+    color: white;
+    font-weight: 600;
+}
+
+.users-table table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* ====== BOTÓN DE EDITAR ====== */
+.users-table--edit {
+    background: #00b894;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.users-table--edit:hover {
+    background: #019874;
+}
+
+/* ====== BOTÓN DE ELIMINAR ====== */
+.users-table--delete {
+    background: #d63031;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.users-table--delete:hover {
+    background: #b22a2a;
+}
+
+/* ========================= */
+/* ===== MEDIA QUERIES ===== */
+/* ========================= */
+
+/*  Estilo para celulares (hasta 480px) */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px; /* Reduce tamaño de texto global */
+    }
+
+    .users-form form {
+        width: 95%;
+        padding: 1.5rem;
+        margin: 20px auto;
+    }
+
+    .users-table table th,
+    .users-table table td {
+        font-size: 0.85rem; /* Texto más pequeño */
+        padding: 10px;
+    }
+
+    .users-table--edit,
+    .users-table--delete {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+
+    .users-table table {
+        width: 100%;
+    }
+}
+
+/* Estilo para tablets (481px - 768px) */
+@media (max-width: 768px) {
+    .users-form form {
+        width: 90%;
+    }
+
+    .users-table table {
+        width: 100%;
+    }
+
+    .users-table table th,
+    .users-table table td {
+        font-size: 0.9rem;
+    }
+}
